@@ -1,189 +1,153 @@
+/* PALETTE: Egg-White: #F9F9F9 | Light Gray: #A0A0A0 */
+
 :root {
-    --paper: #FBFBF9;
-    --obsidian: #1A1A1A;
-    --mist: #D1D9D1;
-    --dusk: #F2F2EF;
-    --transition-slow: all 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+    --egg-white: #F9F9F9;
+    --light-gray: #A0A0A0;
+    --border-color: #E0E0E0;
 }
 
 * {
-    margin: 0; padding: 0; box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--paper);
-    color: var(--obsidian);
+    background-color: var(--egg-white);
+    color: var(--light-gray);
     font-family: 'Inter', sans-serif;
-    font-weight: 200;
     line-height: 1.6;
-    letter-spacing: 0.12em;
     overflow-x: hidden;
-    /* Prevent text size adjustment on orientation change */
-    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Cursor - Hidden by default on mobile/tablets */
-#cursor {
-    display: none; 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-/* Base Section */
-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 15%; /* Generous whitespace */
-    position: relative;
+.section {
+    padding: 120px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* TYPOGRAPHY */
+.monogram {
+    font-size: 8rem;
+    font-weight: 300;
+    letter-spacing: -4px;
     text-align: center;
+    margin: 100px 0;
 }
 
-/* Animations */
-.reveal {
+.label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 1.1rem;
+    max-width: 450px;
+}
+
+/* GRID SYSTEM */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* COMPONENTS */
+.gray-bg {
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-gray);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+}
+
+.placeholder-img {
+    aspect-ratio: 4/5;
+    width: 100%;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    margin-top: 40px;
+}
+
+.gallery-item {
+    aspect-ratio: 16/9;
+}
+
+/* BUTTONS */
+button, .btn-waze, .btn-outline {
+    background: transparent;
+    border: 1px solid var(--light-gray);
+    color: var(--light-gray);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:hover, .btn-waze:hover {
+    background-color: var(--light-gray);
+    color: var(--egg-white);
+}
+
+/* ANIMATIONS */
+.fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: var(--transition-slow);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-.reveal.visible {
+
+.fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Components */
-.video-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #EBEBEB;
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.hero-title {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-}
-
-.horizon-line {
-    width: 0;
-    height: 1px;
-    background: var(--obsidian);
-    margin-bottom: 40px;
-    transition: width 2s ease;
-}
-
-#weight.visible .horizon-line {
-    width: 120px;
-}
-
-/* Grid: Desktop First, then Mobile overrides */
-.texture-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    width: 100%;
-}
-
-.texture-box {
-    width: 100%;
-    aspect-ratio: 1;
-    margin-bottom: 15px;
-    filter: grayscale(1);
-    transition: var(--transition-slow);
-}
-
-.texture-label {
-    font-size: 0.55rem;
-    text-transform: uppercase;
-    opacity: 0.4;
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 300px; /* Reduced for mobile viewport */
-    background: #EEEEEE;
-    display: flex;
-    align-items: center; justify-content: center;
-    font-size: 0.5rem; color: #AAA;
-}
-
-.cta-container {
-    width: 100%;
-    max-width: 300px;
-    position: relative;
-}
-
-input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid rgba(26, 26, 26, 0.2);
-    background: transparent;
-    padding: 12px 0;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    border-radius: 0; /* Remove iOS default radius */
-}
-
-/* Mobile Media Queries */
+/* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
-    section {
-        padding: 0 40px; /* Tighter padding for mobile screens */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .monogram {
+        font-size: 4rem;
     }
 
-    .hero-title {
-        font-size: 0.6rem;
+    .title {
+        font-size: 1.8rem;
     }
 
-    .quiet-text {
-        font-size: 1.1rem;
-    }
-
-    .texture-grid {
-        grid-template-columns: 1fr; /* Stack textures vertically */
-        gap: 60px;
-    }
-
-    .texture-box {
-        width: 80%;
-        margin: 0 auto 15px auto;
-    }
-
-    .spacer {
-        height: 20vh; /* Shorter spacers for small screens */
-    }
-
-    .image-placeholder {
-        height: 40vh;
-    }
-
-    footer {
-        position: relative;
-        margin-top: 60px;
-        padding-bottom: 40px;
-    }
-}
-
-/* Show cursor only on pointing devices (PCs) */
-@media (pointer: fine) {
-    #cursor {
-        display: block;
-        width: 6px;
-        height: 6px;
-        background: var(--obsidian);
-        border-radius: 50%;
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-    }
-    .cursor-hover {
-        transform: scale(8);
-        background: var(--mist) !important;
-        opacity: 0.4;
-    }
-    body {
-        cursor: none;
+    .section {
+        padding: 60px 0;
     }
 }

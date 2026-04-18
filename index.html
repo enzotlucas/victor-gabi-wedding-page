@@ -1,61 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>OASIS | Architectural Silence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor & Gabrielle | Casamento</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="cursor"></div>
 
-    <section id="hero">
-        <div class="video-circle"><div class="light-glimmer"></div></div>
-        <h1 class="hero-title reveal">Silence, curated.</h1>
-        <div class="scroll-indicator"></div>
-    </section>
+    <!-- SECTION 1: MONOGRAM -->
+    <header class="hero section">
+        <div class="container">
+            <h1 class="monogram fade-in">V & G</h1>
+        </div>
+    </header>
 
-    <section id="weight">
-        <div class="horizon-line"></div>
-        <p class="quiet-text reveal">The world is loud. Your mind doesn't have to be.</p>
-    </section>
-
-    <section id="offering">
-        <div class="texture-grid">
-            <div class="texture-item reveal">
-                <div class="texture-box" style="background: #E8E4E1;"></div>
-                <p class="texture-label">Honed Limestone</p>
+    <!-- SECTION 2: THANK YOU & PHOTO -->
+    <section class="message section">
+        <div class="container grid">
+            <div class="image-wrapper fade-in">
+                <div class="placeholder-img gray-bg">
+                    <!-- <img src="couple-photo.jpg" alt="Victor e Gabrielle"> -->
+                    <span>FOTO DO CASAL</span>
+                </div>
             </div>
-            <div class="texture-item reveal">
-                <div class="texture-box" style="background: #DED6CC;"></div>
-                <p class="texture-label">White Oak</p>
-            </div>
-            <div class="texture-item reveal">
-                <div class="texture-box" style="background: #D1D1D1;"></div>
-                <p class="texture-label">Woven Linen</p>
+            <div class="text-block fade-in">
+                <p class="label">MENSAGEM</p>
+                <h2 class="title">Obrigado por estarem conosco.</h2>
+                <p class="description">Nossa jornada é feita de momentos e pessoas especiais. Sua presença é o maior presente que poderíamos receber ao iniciar este novo capítulo.</p>
             </div>
         </div>
     </section>
 
-    <div class="spacer"></div>
-
-    <section id="narrative">
-        <div class="hero-image-container reveal">
-            <div class="image-placeholder">[ A SINGLE CHAIR ]</div>
+    <!-- SECTION 3: CEREMONY -->
+    <section class="ceremony section">
+        <div class="container grid">
+            <div class="text-block fade-in">
+                <h2 class="label">CASAMENTO</h2>
+                <p class="title">A Cerimônia</p>
+                <div class="details">
+                    <div class="detail-item">
+                        <small>LOCAL</small>
+                        <p>Catedral Metropolitana</p>
+                    </div>
+                    <div class="detail-item">
+                        <small>HORÁRIO</small>
+                        <p>19:00 — 18 de Outubro de 2025</p>
+                    </div>
+                    <div class="detail-item">
+                        <small>TRAJE</small>
+                        <p>Passeio Completo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-wrapper fade-in">
+                <div class="placeholder-img gray-bg">
+                    <!-- <img src="church.jpg" alt="Igreja"> -->
+                    <span>IMAGEM DA IGREJA</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="cta">
-        <h2 class="hero-title reveal" style="margin-bottom: 60px;">Begin your ritual.</h2>
-        <div class="cta-container reveal">
-            <input type="email" placeholder="Email" aria-label="Email subscription">
-            <button class="arrow-btn">→</button>
+    <!-- SECTION 4: MAP -->
+    <section class="map section">
+        <div class="container fade-in">
+            <p class="label">LOCALIZAÇÃO</p>
+            <div class="map-placeholder gray-bg">
+                <span>MAPA INTERATIVO</span>
+            </div>
+            <a href="https://waze.com" target="_blank" class="btn-waze">ABRIR NO WAZE</a>
         </div>
-        <footer>Limited to 1,000 members globally.</footer>
     </section>
+
+    <!-- SECTION 5: RECEPTION -->
+    <section class="reception section">
+        <div class="container">
+            <p class="label">RECEPÇÃO</p>
+            <div class="gallery grid">
+                <div class="gallery-item gray-bg fade-in"><span>ESPAÇO</span></div>
+                <div class="gallery-item gray-bg fade-in"><span>DETALHES</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: REGISTRY -->
+    <section class="registry section">
+        <div class="container fade-in">
+            <p class="label">PRESENTES</p>
+            <h2 class="title">Lista de Casamento</h2>
+            <p class="description">Caso deseje nos presentear, selecionamos algumas opções em nossa lista virtual.</p>
+            <button class="btn-outline">ACESSAR LISTA</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>V & G — 2025</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
