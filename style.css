@@ -1,0 +1,189 @@
+:root {
+    --paper: #FBFBF9;
+    --obsidian: #1A1A1A;
+    --mist: #D1D9D1;
+    --dusk: #F2F2EF;
+    --transition-slow: all 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    background-color: var(--paper);
+    color: var(--obsidian);
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    line-height: 1.6;
+    letter-spacing: 0.12em;
+    overflow-x: hidden;
+    /* Prevent text size adjustment on orientation change */
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Custom Cursor - Hidden by default on mobile/tablets */
+#cursor {
+    display: none; 
+}
+
+/* Base Section */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%; /* Generous whitespace */
+    position: relative;
+    text-align: center;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition-slow);
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Components */
+.video-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #EBEBEB;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.horizon-line {
+    width: 0;
+    height: 1px;
+    background: var(--obsidian);
+    margin-bottom: 40px;
+    transition: width 2s ease;
+}
+
+#weight.visible .horizon-line {
+    width: 120px;
+}
+
+/* Grid: Desktop First, then Mobile overrides */
+.texture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.texture-box {
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    filter: grayscale(1);
+    transition: var(--transition-slow);
+}
+
+.texture-label {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    opacity: 0.4;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px; /* Reduced for mobile viewport */
+    background: #EEEEEE;
+    display: flex;
+    align-items: center; justify-content: center;
+    font-size: 0.5rem; color: #AAA;
+}
+
+.cta-container {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.2);
+    background: transparent;
+    padding: 12px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    border-radius: 0; /* Remove iOS default radius */
+}
+
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+    section {
+        padding: 0 40px; /* Tighter padding for mobile screens */
+    }
+
+    .hero-title {
+        font-size: 0.6rem;
+    }
+
+    .quiet-text {
+        font-size: 1.1rem;
+    }
+
+    .texture-grid {
+        grid-template-columns: 1fr; /* Stack textures vertically */
+        gap: 60px;
+    }
+
+    .texture-box {
+        width: 80%;
+        margin: 0 auto 15px auto;
+    }
+
+    .spacer {
+        height: 20vh; /* Shorter spacers for small screens */
+    }
+
+    .image-placeholder {
+        height: 40vh;
+    }
+
+    footer {
+        position: relative;
+        margin-top: 60px;
+        padding-bottom: 40px;
+    }
+}
+
+/* Show cursor only on pointing devices (PCs) */
+@media (pointer: fine) {
+    #cursor {
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: var(--obsidian);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+    }
+    .cursor-hover {
+        transform: scale(8);
+        background: var(--mist) !important;
+        opacity: 0.4;
+    }
+    body {
+        cursor: none;
+    }
+}
