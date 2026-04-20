@@ -151,3 +151,57 @@ button:hover, .btn-waze:hover {
         padding: 60px 0;
     }
 }
+
+.palette {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.color {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.c1 { background: #e8e2d6; }
+.c2 { background: #9dad84; }
+.c3 { background: #a88b7a; }
+.c4 { background: #5a4a3f; }
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.images {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.images img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 6px;
+}
+
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.left {
+  left: -10px;
+}
+
+.right {
+  right: -10px;
+}

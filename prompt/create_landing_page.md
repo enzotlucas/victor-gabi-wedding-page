@@ -1,4 +1,4 @@
-Pensando em uma landing page de uma página só referente a um casamento de duas pessoas elegantes. As cores principais do site devem ser clara de ovo e cinza, escolha templates que façam sentido para uma página que terá o seguinte fluxo: 
+Pensando em uma landing page de uma página só referente a um casamento de duas pessoas elegantes. É MUITO IMPORTANTE QUE O SITE TENHA AS CORES CINZA CLARO E CLARA DE OVO COMO PRINCIPAIS, NENHUMA OUTRA COR PODE SER USADO, escolha templates que façam sentido para uma página que terá o seguinte fluxo: 
 
 1. Ícode com a letra V e G (nome dos noivos são Victor e Gabrielle) de forma elegante, junto de um fundo clean 
 2. Um texto de agradecimento dos noivos junto de uma foto de ambos 
@@ -50,3 +50,5 @@ Paragraph 3: Provide abstract reference points that capture this aesthetic's ess
 Reference the emotional qualities of premium experiences, sophisticated environments, or refined craftsmanship that should inspire thedesign. Explain how these abstract references should influence the emotional quality and visual sophistication of the final single-page design,without naming specific brands or platforms.
 
 The generated prompt must emphasize this is ONE COHESIVE LANDING PAGE with a single scrolling experience. Focus on feeling, atmosphere,and abstract quality references rather than technical details or specific examples. Keep all references conceptual and high-level toallow for maximum creative interpretation.
+
+Separate the html, css and js in different files, make sure that the landing page is optimized to run on any smartphone as well.
