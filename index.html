@@ -13,14 +13,14 @@
 
 <body>
 
-    <!-- SECTION 1: MONOGRAM -->
+    <!-- MONOGRAM -->
     <header class="hero section">
         <div class="container">
             <h1 class="monogram fade-in">V & G</h1>
         </div>
     </header>
 
-    <!-- SECTION 2: THANK YOU & PHOTO -->
+    <!-- THANK YOU & PHOTO -->
     <section class="message section">
         <div class="container grid">
             <div class="image-wrapper fade-in">
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <!-- SECTION 3: CEREMONY -->
+    <!-- CEREMONY -->
     <section class="ceremony section">
         <div class="container grid">
             <div class="text-block fade-in">
@@ -47,11 +47,17 @@
                 <div class="details">
                     <div class="detail-item">
                         <small>LOCAL</small>
-                        <p>Catedral Metropolitana</p>
+                        <p>Casa Quintal</p>
                     </div>
                     <div class="detail-item">
-                        <small>HORÁRIO</small>
-                        <p>19:00 — 18 de Outubro de 2025</p>
+                        <small>ENDEREÇO</small>
+                        <p>AV. Angélica, 2278 — Consolação, São Paulo</p>
+                    </div>
+                    <div class="detail-item">
+                        <small>DATA E HORÁRIO</small>
+                        <p>19 de Setembro de 2026</p>   
+                        <p>Abertura às 16:15</p>
+                        <p>Início da cerimônia às 17:00</p>
                     </div>
                 </div>
             </div>
@@ -64,18 +70,26 @@
         </div>
     </section>
 
-    <!-- SECTION 4: MAP -->
+    <!-- MAP -->
     <section class="map section">
         <div class="container fade-in">
             <p class="label">LOCALIZAÇÃO</p>
             <div class="map-placeholder gray-bg">
-                <span>MAPA INTERATIVO</span>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.456363666592!2d-46.6611708!3d-23.5520477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582e026b8657%3A0x9a8009879cba331c!2sCasa%20Quintal!5e0!3m2!1spt-BR!2sbr!4v1776713015888!5m2!1spt-BR!2sbr"
+                    width="100%" height=100% style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <a href="https://waze.com" target="_blank" class="btn-waze">ABRIR NO WAZE</a>
+            <div class="map-buttons">
+                <a href="https://www.waze.com/pt-BR/live-map/directions/br/sp/av.-angelica,-2278?to=place.ChIJ2aVaAy5YzpQR9B58szAQJpo"
+                    target="_blank" class="btn-outline btn-map">ABRIR NO WAZE</a>
+                <a href="https://m.uber.com/go/home?drop%5B0%5D=%7B%22addressLine1%22%3A%22Av.%20Angelica%2C%202278%20-%20Consola%C3%A7%C3%A3o%22%2C%22addressLine2%22%3A%22S%C3%A3o%20Paulo%20-%20SP%2C%2001228-200%22%2C%22id%22%3A%2231e2d84d-ab97-40b1-dd23-e1837bbc3d79%22%2C%22source%22%3A%22SEARCH%22%2C%22latitude%22%3A-23.55221%2C%22longitude%22%3A-46.6609068%2C%22provider%22%3A%22uber_places%22%7D&marketing_vistor_id=831d3d18-9675-4d16-a82f-a12ab49dee4e&uclick_id=275a63fe-39f7-4e66-b4bb-37d96ff9e437"
+                    target="_blank" class="btn-outline btn-map">ABRIR NO UBER</a>
+            </div>
         </div>
     </section>
 
-    <!-- SECTION 5: RECEPTION -->
+    <!-- RECEPTION -->
     <section class="reception section">
         <div class="container">
             <p class="label">RECEPÇÃO</p>
@@ -86,8 +100,8 @@
         </div>
     </section>
 
-    <!-- SECTION 6: DRESS CODE -->
-    <section class="ceremony section">
+    <!-- DRESS CODE -->
+    <section class="dresscode section">
         <div class="container grid">
             <div class="text-block fade-in">
                 <h2 class="label">TRAJES</h2>
@@ -95,10 +109,10 @@
                 <p class="description">Para nós, o mais importante é a sua presença! Mas ficaremos felizes se, em seus
                     trajes, você apoiar a paleta de cores do nosso casamento.</p>
                 <div class="palette">
-                    <div class="color c1"></div>
-                    <div class="color c2"></div>
-                    <div class="color c3"></div>
-                    <div class="color c4"></div>
+                    <div class="color guest1"></div>
+                    <div class="color guest2"></div>
+                    <div class="color guest3"></div>
+                    <div class="color guest4"></div>
                 </div>
             </div>
             <div class="gallery image-wrapper fade-in">
@@ -124,14 +138,66 @@
         </div>
     </section>
 
-    <!-- SECTION 7: REGISTRY -->
+    <!-- BEST MAN -->
+    <section class="bestpeople section">
+        <div class="container grid">
+            <div class="gallery image-wrapper fade-in">
+                <button class="arrow left" onclick="prev()">❮</button>
+
+                <div class="images" id="slider">
+                    <div class="placeholder-img gray-bg" alt="Look 1">
+                        <!-- <img src="look1.jpg" alt="Igreja"> -->
+                        <span>IMAGEM 1</span>
+                    </div>
+                    <div class="placeholder-img gray-bg" alt="Look 2">
+                        <!-- <img src="look2.jpg" alt="Igreja"> -->
+                        <span>IMAGEM 2</span>
+                    </div>
+                    <div class="placeholder-img gray-bg" alt="Look 3">
+                        <!-- <img src="look3.jpg" alt="Igreja"> -->
+                        <span>IMAGEM 3</span>
+                    </div>
+                </div>
+
+                <button class="arrow right" onclick="next()">❯</button>
+            </div>
+            <div class="text-block fade-in">
+                <h2 class="label">PADRINHOS</h2>
+                <p class="title">Nossos queridos padrinhos</p>
+                <p class="description">TBD.</p>
+                <div class="palette">
+                    <div class="color c1"></div>
+                    <div class="color c2"></div>
+                    <div class="color c3"></div>
+                    <div class="color c4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRY -->
     <section class="registry section">
-        <div class="container fade-in">
+        <div class="container grid">
+            <div class="container fade-in">
+                <p class="label">PRESENÇA</p>
+                <h2 class="title">Confirme sua presença</h2>
+                <p class="description">Ficaremos muito felizes em contar com sua presença, por favor confirme até 20/05.
+                </p>
+                <button class="btn-outline">CONFIRMAR PRESENÇA</button>
+            </div>
+            <div class="container fade-in">
+                <h2 class="title">Lista de presentes</h2>
+                <p class="description">Caso deseje nos presentear, selecionamos algumas opções em nossa lista virtual.
+                </p>
+                <button class="btn-outline">ACESSAR LISTA</button>
+            </div>
+        </div>
+        <!-- <div class="container fade-in">
             <p class="label">PRESENTES</p>
             <h2 class="title">Lista de Casamento</h2>
             <p class="description">Caso deseje nos presentear, selecionamos algumas opções em nossa lista virtual.</p>
             <button class="btn-outline">ACESSAR LISTA</button>
-        </div>
+        </div> -->
     </section>
 
     <!-- FOOTER -->
