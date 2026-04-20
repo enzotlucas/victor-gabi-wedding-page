@@ -26,3 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+let sliderIndex = 0;
+
+function updateSlider() {
+  const slider = document.getElementById("slider");
+  slider.style.transform = `translateX(-${sliderIndex * 220}px)`;
+}
+
+function next() {
+  const max = document.querySelectorAll("#slider img").length - 1;
+  if (sliderIndex < max) {
+    sliderIndex++;
+    updateSlider();
+  }
+}
+
+function prev() {
+  if (sliderIndex > 0) {
+    sliderIndex--;
+    updateSlider();
+  }
+}
