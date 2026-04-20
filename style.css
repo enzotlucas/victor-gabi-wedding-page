@@ -82,6 +82,23 @@ body {
     letter-spacing: 0.1rem;
 }
 
+.registry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+/* cada bloco vira uma coluna flexível */
+.registry-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* empurra o botão pra base */
+.registry-item .btn-outline {
+    margin-top: auto;
+}
+
 .placeholder-img {
     aspect-ratio: 4/5;
     width: 100%;
@@ -175,12 +192,23 @@ button:hover,
         justify-content: center;
         gap: 1%
     }
+
+    .registry-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .registry-item + .registry-item {
+        border-top: 1px solid var(--border-color);
+        margin-top: 40px;
+        padding-top: 40px;
+    }
 }
 
 .palette {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    /* gap: 15px; */
     margin: 25px 0;
 }
 
@@ -189,7 +217,9 @@ button:hover,
     height: 60px;
     border-radius: 50%;
 }
-
+.color + .color {
+    margin-left: -18px;
+}
 .guest1 {
     background: #e8e2d6;
 }
@@ -200,10 +230,26 @@ button:hover,
 
 .guest3 {
     background: #a88b7a;
-}
+}          
 
 .guest4 {
     background: #5a4a3f;
+}
+
+.bestman1 {
+    background: #e8e2d6;
+}
+
+.bestman2 {
+    background: #7a7a79e7;
+}
+
+.bestman3 {
+    background: #333b7a;
+}         
+
+.bestman4 {
+    background: #6f7280;
 }
 
 .gallery {
