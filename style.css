@@ -2,7 +2,7 @@
 
 :root {
     --egg-white: #F9F9F9;
-    --light-gray: #A0A0A0;
+    --secondary-color: #676c55;
     --border-color: #E0E0E0;
 }
 
@@ -14,7 +14,7 @@
 
 body {
     background-color: var(--egg-white);
-    color: var(--light-gray);
+    color: var(--secondary-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
@@ -32,7 +32,6 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-/* TYPOGRAPHY */
 .monogram {
     font-size: 8rem;
     font-weight: 300;
@@ -57,12 +56,18 @@ body {
     line-height: 1.1;
 }
 
+.dresscode-description {
+    font-size: 1.1rem;
+    max-width: 450px;
+    margin: 1%;
+    ;
+}
+
 .description {
     font-size: 1.1rem;
     max-width: 450px;
 }
 
-/* GRID SYSTEM */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -70,13 +75,12 @@ body {
     align-items: center;
 }
 
-/* COMPONENTS */
 .gray-bg {
     background-color: #EAEAEA;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light-gray);
+    color: var(--secondary-color);
     text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 0.1rem;
@@ -88,15 +92,24 @@ body {
     gap: 80px;
 }
 
-/* cada bloco vira uma coluna flexível */
 .registry-item {
     display: flex;
     flex-direction: column;
 }
 
-/* empurra o botão pra base */
 .registry-item .btn-outline {
     margin-top: auto;
+}
+
+.dresscode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.dresscode-item {
+    display: flex;
+    flex-direction: column;
 }
 
 .placeholder-img {
@@ -124,13 +137,11 @@ body {
     aspect-ratio: 16/9;
 }
 
-
-/* BUTTONS */
 button,
 .btn-outline {
     background: transparent;
-    border: 1px solid var(--light-gray);
-    color: var(--light-gray);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
     padding: 15px 30px;
     text-decoration: none;
     font-size: 0.8rem;
@@ -148,11 +159,10 @@ button,
 
 button:hover,
 .btn-map:hover {
-    background-color: var(--light-gray);
+    background-color: var(--secondary-color);
     color: var(--egg-white);
 }
 
-/* ANIMATIONS */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -164,7 +174,6 @@ button:hover,
     transform: translateY(0);
 }
 
-/* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
@@ -193,22 +202,27 @@ button:hover,
         gap: 1%
     }
 
-    .registry-grid {
+    .registry-grid,
+    .dresscode-grid {
         grid-template-columns: 1fr;
         gap: 0;
     }
 
-    .registry-item + .registry-item {
+    .registry-item+.registry-item {
         border-top: 1px solid var(--border-color);
         margin-top: 40px;
         padding-top: 40px;
+    }
+
+    .carousel-button {
+        font-size: 16px;
+        padding: 4px 8px;
     }
 }
 
 .palette {
     display: flex;
     justify-content: center;
-    /* gap: 15px; */
     margin: 25px 0;
 }
 
@@ -217,39 +231,25 @@ button:hover,
     height: 60px;
     border-radius: 50%;
 }
-.color + .color {
+
+.color+.color {
     margin-left: -18px;
 }
-.guest1 {
-    background: #e8e2d6;
+
+.attendants1 {
+    background: #D3A7AE;
 }
 
-.guest2 {
-    background: #9dad84;
+.attendants2 {
+    background: #D9CBB8;
 }
 
-.guest3 {
-    background: #a88b7a;
-}          
-
-.guest4 {
-    background: #5a4a3f;
+.attendants3 {
+    background: #B8CDAA;
 }
 
-.bestman1 {
-    background: #e8e2d6;
-}
-
-.bestman2 {
-    background: #7a7a79e7;
-}
-
-.bestman3 {
-    background: #333b7a;
-}         
-
-.bestman4 {
-    background: #6f7280;
+.attendants4 {
+    background: #A9A9AD;
 }
 
 .gallery {
@@ -286,4 +286,45 @@ button:hover,
 
 .right {
     right: -10px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+.slide img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-size: 14px;
 }

@@ -42,8 +42,8 @@
     <section class="ceremony section">
         <div class="container grid">
             <div class="text-block fade-in">
-                <h2 class="label">CASAMENTO</h2>
-                <p class="title">A Cerimônia</p>
+                <h2 class="label">LOCALIZAÇÃO</h2>
+                <p class="title">Horário e endereço</p>
                 <div class="details">
                     <div class="detail-item">
                         <small>LOCAL</small>
@@ -62,16 +62,24 @@
                 </div>
             </div>
             <div class="image-wrapper fade-in">
-                <div class="placeholder-img gray-bg">
-                    <!-- <img src="church.jpg" alt="Igreja"> -->
-                    <span>IMAGEM DA IGREJA</span>
+                <div class="map-placeholder gray-bg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.456363666592!2d-46.6611708!3d-23.5520477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582e026b8657%3A0x9a8009879cba331c!2sCasa%20Quintal!5e0!3m2!1spt-BR!2sbr!4v1776713015888!5m2!1spt-BR!2sbr"
+                        width="100%" height=100% style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-buttons">
+                    <a href="https://www.waze.com/pt-BR/live-map/directions/br/sp/av.-angelica,-2278?to=place.ChIJ2aVaAy5YzpQR9B58szAQJpo"
+                        target="_blank" class="btn-outline btn-map">ABRIR NO WAZE</a>
+                    <a href="https://m.uber.com/go/home?drop%5B0%5D=%7B%22addressLine1%22%3A%22Av.%20Angelica%2C%202278%20-%20Consola%C3%A7%C3%A3o%22%2C%22addressLine2%22%3A%22S%C3%A3o%20Paulo%20-%20SP%2C%2001228-200%22%2C%22id%22%3A%2231e2d84d-ab97-40b1-dd23-e1837bbc3d79%22%2C%22source%22%3A%22SEARCH%22%2C%22latitude%22%3A-23.55221%2C%22longitude%22%3A-46.6609068%2C%22provider%22%3A%22uber_places%22%7D&marketing_vistor_id=831d3d18-9675-4d16-a82f-a12ab49dee4e&uclick_id=275a63fe-39f7-4e66-b4bb-37d96ff9e437"
+                        target="_blank" class="btn-outline btn-map">ABRIR NO UBER</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- MAP -->
-    <section class="map section">
+    <!-- <section class="map section">
         <div class="container fade-in">
             <p class="label">LOCALIZAÇÃO</p>
             <div class="map-placeholder gray-bg">
@@ -87,91 +95,96 @@
                     target="_blank" class="btn-outline btn-map">ABRIR NO UBER</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- RECEPTION -->
+
+
     <section class="reception section">
-        <div class="container">
-            <p class="label">RECEPÇÃO</p>
-            <div class="gallery grid">
-                <div class="gallery-item gray-bg fade-in"><span>ESPAÇO</span></div>
-                <div class="gallery-item gray-bg fade-in"><span>DETALHES</span></div>
+        <div class="container grid">
+            <div class="text-block fade-in">
+                <p class="label">CASAMENTO</p>
+                <h2 class="title">Recepção e Cerimônia</h2>
+                <p class="description">A cerimônia e a recepção acontecerão no mesmo local. O espaço será aberto
+                            às 16h15, e a cerimônia terá
+                            início pontualmente às 17h.
+                            Pedimos, com carinho, que cheguem com antecedência, pois após o início não será permitida a
+                            entrada.</p>
+            </div>
+            <div class="image-wrapper fade-in">
+                <div class="placeholder-img gray-bg">
+                    <span>ESPAÇO</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- DRESS CODE -->
     <section class="dresscode section">
-        <div class="container grid">
-            <div class="text-block fade-in">
-                <h2 class="label">TRAJES</h2>
-                <p class="title">Dress code</p>
-                <p class="description">Para nós, o mais importante é a sua presença! Mas ficaremos felizes se, em seus
-                    trajes, você apoiar a paleta de cores do nosso casamento.</p>
-                <div class="palette">
-                    <div class="color guest1"></div>
-                    <div class="color guest2"></div>
-                    <div class="color guest3"></div>
-                    <div class="color guest4"></div>
-                </div>
-            </div>
-            <div class="gallery image-wrapper fade-in">
-                <button class="arrow left" onclick="prev()">❮</button>
-
-                <div class="images" id="slider">
-                    <div class="placeholder-img gray-bg" alt="Look 1">
-                        <!-- <img src="look1.jpg" alt="Igreja"> -->
-                        <span>IMAGEM 1</span>
-                    </div>
-                    <div class="placeholder-img gray-bg" alt="Look 2">
-                        <!-- <img src="look2.jpg" alt="Igreja"> -->
-                        <span>IMAGEM 2</span>
-                    </div>
-                    <div class="placeholder-img gray-bg" alt="Look 3">
-                        <!-- <img src="look3.jpg" alt="Igreja"> -->
-                        <span>IMAGEM 3</span>
-                    </div>
+        <div class="container fade-in">
+            <p class="label">TRAJES</p>
+            <p class="title">Dress code</p>
+            <div class="dresscode-grid">
+                <div class="dresscode-item">
+                    <p class="dresscode-description">Para os homens, sugerimos terno com camisa social, sendo opcional o
+                        uso de
+                        gravata.
+                        Pedimos gentilmente que evitem trajes nas cores cinza e bege.</p>
+                    <p class="dresscode-description">Para as mulheres, vestidos longos ou midi são ótimas escolhas. Para
+                        manter a
+                        harmonia da paleta do evento, sugerimos evitar tons de verde e rosa bebê.</p>
                 </div>
 
-                <button class="arrow right" onclick="next()">❯</button>
+                <div class="dresscode-item">
+                    <p class="dresscode-description">A ideia é que todos se sintam elegantes, confortáveis e confiantes,
+                        sem deixar de valorizar esse momento tão especial.</p>
+                    <p class="dresscode-description">Ah, e vale lembrar: em setembro, o clima pode variar ao longo do
+                        dia. Sugerimos levar um casaco leve ou echarpe para o entardecer.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- BEST MAN -->
-    <section class="bestpeople section">
+    <section class="attendants section">
         <div class="container grid">
-            <div class="gallery image-wrapper fade-in">
-                <button class="arrow left" onclick="prev()">❮</button>
-
-                <div class="images" id="slider">
-                    <div class="placeholder-img gray-bg" alt="Look 1">
-                        <!-- <img src="look1.jpg" alt="Igreja"> -->
-                        <span>IMAGEM 1</span>
-                    </div>
-                    <div class="placeholder-img gray-bg" alt="Look 2">
-                        <!-- <img src="look2.jpg" alt="Igreja"> -->
-                        <span>IMAGEM 2</span>
-                    </div>
-                    <div class="placeholder-img gray-bg" alt="Look 3">
-                        <!-- <img src="look3.jpg" alt="Igreja"> -->
-                        <span>IMAGEM 3</span>
-                    </div>
-                </div>
-
-                <button class="arrow right" onclick="next()">❯</button>
-            </div>
             <div class="text-block fade-in">
-                <h2 class="label">PADRINHOS</h2>
-                <p class="title">Nossos queridos padrinhos</p>
-                <p class="description">É uma emoção única e indescritível tê-los ao nosso lado e poder partilhar com
-                    vocês toda felicidade dessa nova etapa em nossas vidas: nosso casamento! Por isso, desejamos tê-los
-                    como testemunhas do nosso sonho e do nosso amor!</p>
+                <h2 class="label">PADRINHOS E PAIS</h2>
+                <p class="title">Nossos queridos padrinhos e pais</p>
+                <p class="description">Nossos queridos padrinhos e pais
+                    Conheça os padrinhos e os pais, que viverão esse momento tão especial ao nosso lado.
+                    Abaixo, você pode conhecer um pouquinho de cada um deles e paleta de cor escolhida.
+                    Essas cores fazem parte da identidade desse dia tão especial, por isso, pedimos com carinho que não
+                    sejam utilizadas pelos convidados.</p>
                 <div class="palette">
-                    <div class="color bestman1"></div>
-                    <div class="color bestman2"></div>
-                    <div class="color bestman3"></div>
-                    <div class="color bestman4"></div>
+                    <div class="color attendants1"></div>
+                    <div class="color attendants2"></div>
+                    <div class="color attendants3"></div>
+                    <div class="color attendants4"></div>
+                </div>
+            </div>
+            <div class="gallery fade-in">
+                <div class="carousel">
+                    <button class="carousel-button prev">⟨</button>
+
+                    <div class="carousel-container images">
+                        <div class="slide active">
+                            <img src="imgs/enzo.jpg" alt="Enzo">
+                            <p>Enzo</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/italo.jpg" alt="Italo">
+                            <p>Italo</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/matheus.jpg" alt="Matheus">
+                            <p>Matheus</p>
+                        </div>
+                    </div>
+
+                    <button class="carousel-button next">⟩</button>
                 </div>
             </div>
         </div>
@@ -208,7 +221,12 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts/attendants.js"></script>
+    <script src="scripts/default.js"></script>
 </body>
+
+<script>
+    startAutoPlay();
+</script>
 
 </html>
