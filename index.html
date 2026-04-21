@@ -19,34 +19,8 @@
 
     <!-- MONOGRAM -->
     <header class="hero section">
-        <div class="container">
-            <img class="logo" src="imgs/logo.png" alt="Victor e Gabrielle">
-
-            <div class="countdown-wrapper">
-                <h2 class="title blur">Contagem Regressiva</h2>
-
-                <div class="countdown">
-                    <div class="box">
-                        <span id="days">100</span>
-                        <small>DIAS</small>
-                    </div>
-
-                    <div class="box">
-                        <span class="box-content" id="hours">11</span>
-                        <small class="box-content">HORAS</small>
-                    </div>
-
-                    <div class="box">
-                        <span id="minutes">25</span>
-                        <small>MINUTOS</small>
-                    </div>
-
-                    <div class="box">
-                        <span id="seconds">34</span>
-                        <small>SEGUNDOS</small>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-container container">
+            <img class="logo" src="imgs/logo_teste.png" alt="Victor e Gabrielle">
         </div>
     </header>
 
@@ -64,6 +38,33 @@
                 <h2 class="title">Obrigado por estarem conosco.</h2>
                 <p class="description">Nossa jornada é feita de momentos e pessoas especiais. Sua presença é o maior
                     presente que poderíamos receber ao iniciar este novo capítulo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section section">
+        <div class="countdown-wrapper">
+            <div class="countdown">
+                <div class="box">
+                    <span id="days">100</span>
+                    <small>DIAS</small>
+                </div>
+
+                <div class="box">
+                    <span class="box-content" id="hours">11</span>
+                    <small class="box-content">HORAS</small>
+                </div>
+
+                <div class="box">
+                    <span id="minutes">25</span>
+                    <small>MINUTOS</small>
+                </div>
+
+                <div class="box">
+                    <span id="seconds">34</span>
+                    <small>SEGUNDOS</small>
+                </div>
             </div>
         </div>
     </section>
@@ -160,11 +161,28 @@
             <div class="text-block fade-in">
                 <h2 class="label">PADRINHOS E PAIS</h2>
                 <p class="title">Nossos queridos padrinhos e pais</p>
+                <div>
+                    <div class="attendants-images">
+                        <div class="attendant-item">
+                            <img src="imgs/attendant.png" alt="Imagem 1">
+                            <p>Padrinhos</p>
+                        </div>
+
+                        <div class="attendant-item">
+                            <img src="imgs/parent.png" alt="Imagem 2">
+                            <p>Pais</p>
+                        </div>
+                    </div>
+                </div>
                 <p class="description">
                     Conheça os padrinhos e os pais, que viverão esse momento tão especial ao nosso lado.
-                    Abaixo, você pode conhecer um pouquinho de cada um deles e paleta de cor escolhida.
-                    Essas cores fazem parte da identidade desse dia tão especial, por isso, pedimos com carinho que não
-                    sejam utilizadas pelos convidados.</p>
+                    Ao lado, você pode conhecer um pouquinho de cada um deles.
+                </p>
+
+                <p class="description">
+                    Essas cores fazem parte da identidade desse dia tão especial, por isso, pedimos com carinho que <strong>não
+                    sejam utilizadas pelos convidados.</strong>
+                </p>
                 <div class="palette">
                     <div class="color attendants1"></div>
                     <div class="color attendants2"></div>
@@ -174,26 +192,22 @@
             </div>
             <div class="gallery fade-in">
                 <div class="carousel">
-                    <button class="carousel-button prev">⟨</button>
-
                     <div class="carousel-container images">
                         <div class="slide active">
-                            <img src="imgs/enzo.jpg" alt="Enzo">
+                            <img src="imgs/example.jpg" alt="Enzo">
                             <p>Enzo</p>
                         </div>
 
                         <div class="slide">
-                            <img src="imgs/italo.jpg" alt="Italo">
+                            <img src="imgs/example.jpg" alt="Italo">
                             <p>Italo</p>
                         </div>
 
                         <div class="slide">
-                            <img src="imgs/matheus.jpg" alt="Matheus">
+                            <img src="imgs/example.jpg" alt="Matheus">
                             <p>Matheus</p>
                         </div>
                     </div>
-
-                    <button class="carousel-button next">⟩</button>
                 </div>
             </div>
         </div>
@@ -232,7 +246,7 @@
 
     <script src="scripts/attendants.js"></script>
     <script src="scripts/default.js"></script>
-    <script src="scripts/hero.js"></script>
+    <script src="scripts/countdown.js"></script>
 </body>
 
 <script>

@@ -37,8 +37,8 @@ body {
     width: 50%;
     /* ajuste conforme necessário */
     transition: transform 0.1s linear;
-    filter:
-        drop-shadow(0 0 10px white) drop-shadow(0 0 10px white);
+    /* filter:
+        drop-shadow(0 0 10px white) drop-shadow(0 0 10px white); */
 }
 
 .countdown-wrapper {
@@ -46,8 +46,7 @@ body {
     margin-top: auto;
     text-align: center;
     padding-bottom: 40px;
-    position: absolute;
-    bottom: 8%;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -59,7 +58,6 @@ body {
 }
 
 .box {
-    background: var(--secondary-color);
     color: var(--egg-white);
     padding: 20px 25px;
     border-radius: 12px;
@@ -82,17 +80,18 @@ body {
 }
 
 .hero {
+    background: #6b734e;
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-.hero::before {
+.hero-container::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    background-image: url('imgs/hero_background.png');
+    background-image: url('imgs/hero_background_teste.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -102,6 +101,23 @@ body {
     opacity: 0.7;
 
     z-index: -1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url('imgs/hero_background_teste.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.1);
+
+    opacity: 0.3;
+
+    z-index: 0;
 }
 
 .container {
@@ -129,6 +145,17 @@ body {
     font-weight: 600;
     margin-bottom: 24px;
     display: block;
+}
+
+.countdown-section {
+    position: relative;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('imgs/wedding.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .title {
@@ -260,71 +287,6 @@ button:hover,
 }
 
 
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .monogram {
-        font-size: 4rem;
-    }
-
-    .title {
-        font-size: 1.8rem;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-    .btn-map {
-        margin: 1%;
-    }
-
-    .map-buttons {
-        display: block;
-        justify-content: center;
-        gap: 1%
-    }
-
-    .registry-grid,
-    .dresscode-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .registry-item+.registry-item {
-        border-top: 1px solid var(--border-color);
-        margin-top: 40px;
-        padding-top: 40px;
-    }
-
-    .carousel-button {
-        font-size: 16px;
-        padding: 4px 8px;
-    }
-
-    .logo {
-        width: 100%;
-    }
-
-    .countdown-wrapper {
-        text-align: center;
-        margin-top: auto;
-        padding-bottom: 40px;
-        width: 100%;
-        bottom: 10%;
-    }
-
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .countdown {
     gap: 10px;
     flex-wrap: wrap;
@@ -336,11 +298,11 @@ button:hover,
 }
 
 .box span {
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .box small {
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 .palette {
@@ -357,6 +319,32 @@ button:hover,
 
 .color+.color {
     margin-left: -18px;
+}
+
+.attendants-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+    align-items: start;
+}
+
+.attendant-item {
+    text-align: center;
+}
+
+.attendant-item img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    /* mantém proporção igual sempre */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.attendant-item p {
+    margin-top: 10px;
+    font-size: 1rem;
 }
 
 .attendants1 {
@@ -412,6 +400,8 @@ button:hover,
 }
 
 .carousel {
+
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -420,7 +410,6 @@ button:hover,
 
 .carousel-container {
     width: 100%;
-    max-width: 220px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -428,7 +417,7 @@ button:hover,
 
 .slide {
     position: absolute;
-    width: 100%;
+    inset: 0; /* substitui width + posicionamento manual */
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -441,13 +430,115 @@ button:hover,
 }
 
 .slide img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .slide p {
     margin-top: 10px;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .monogram {
+        font-size: 4rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .btn-map {
+        margin: 1%;
+    }
+
+    .map-buttons {
+        display: block;
+        justify-content: center;
+        gap: 1%
+    }
+
+    .registry-grid,
+    .dresscode-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .registry-item+.registry-item {
+        border-top: 1px solid var(--border-color);
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    .carousel-button {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .carousel-container {
+        max-width: 220px;
+    }
+
+    .slide img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .slide.active {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .countdown-wrapper {
+        text-align: center;
+        margin-top: auto;
+        padding-bottom: 40px;
+        width: 100%;
+    }
+
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .countdown {
+        flex-wrap: nowrap;   
+        justify-content: space-between;
+        gap: 8px;
+        overflow-x: auto;   
+    }
+
+    .box {
+        flex: 0 0 auto;         
+        min-width: 60px;      
+        padding: 12px 10px;
+    }
 }

@@ -33,7 +33,7 @@ function stopAutoPlay() {
 }
 
 function restartAutoPlay() {
-
+  stopAutoPlay();
   startAutoPlay();
 }
 
