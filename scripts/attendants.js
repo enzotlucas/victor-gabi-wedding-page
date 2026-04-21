@@ -26,11 +26,14 @@ function prevSlide() {
 }
 
 function startAutoPlay() {
-  autoPlayInterval = setInterval(nextSlide, 3000); 
+  autoPlayInterval = setInterval(nextSlide, 3000);
+}
+function stopAutoPlay() {
+  clearInterval(autoPlayInterval);
 }
 
 function restartAutoPlay() {
-  clearInterval(autoPlayInterval);
+
   startAutoPlay();
 }
 
@@ -52,7 +55,7 @@ container.addEventListener('touchstart', (e) => {
 container.addEventListener('touchend', (e) => {
   endX = e.changedTouches[0].clientX;
   handleSwipe();
-  startAutoPlay();
+  restartAutoPlay();
 });
 
 function handleSwipe() {
@@ -66,4 +69,4 @@ function handleSwipe() {
 }
 
 container.addEventListener('mouseenter', stopAutoPlay);
-container.addEventListener('mouseleave', startAutoPlay);
+container.addEventListener('mouseleave', restartAutoPlay);
