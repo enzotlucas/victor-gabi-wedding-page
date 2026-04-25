@@ -91,24 +91,7 @@ body {
     position: absolute;
     inset: 0;
 
-    background-image: url('imgs/hero_background_teste.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    transform: scale(1.1);
-
-    opacity: 0.7;
-
-    z-index: -1;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background-image: url('imgs/hero_background_teste.png');
+    background-image: url('imgs/hero_background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -118,6 +101,29 @@ body {
     opacity: 0.3;
 
     z-index: 0;
+}
+
+.hero-date {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.hero-date .box {
+    min-width: auto;
+    padding: 8px 12px;
+    background: transparent;
+}
+
+.hero-date .box span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--egg-white);
+    line-height: 1;
 }
 
 .container {
@@ -158,6 +164,52 @@ body {
     background-position: center;
 }
 
+.image-title{
+    position: relative;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)),
+        url('imgs/wedding.png'); /* troque pela imagem desejada */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px 20px;
+}
+
+/* caixa central semelhante à referência */
+.image-title-box{
+    width: min(100%, 920px);
+    padding: 70px 40px;
+
+    background: rgba(255,255,255,0);
+    backdrop-filter: blur(1px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* texto manuscrito central */
+.image-title-text{
+    margin: 0;
+    color: var(--egg-white);
+    font-family: 'Alex Brush', cursive;
+    font-size: 5.4rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+
 .title {
     font-size: 2.5rem;
     font-weight: 400;
@@ -171,7 +223,6 @@ body {
     font-size: 1.1rem;
     max-width: 450px;
     margin: 1%;
-    ;
 }
 
 .description {
@@ -417,7 +468,8 @@ button:hover,
 
 .slide {
     position: absolute;
-    inset: 0; /* substitui width + posicionamento manual */
+    inset: 0;
+    /* substitui width + posicionamento manual */
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -441,7 +493,62 @@ button:hover,
     font-size: 14px;
 }
 
+.floating-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(107,115,78,0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 18px 20px;
+    z-index: 999;
+    transform: translateY(-100%);
+    transition: transform 0.35s ease;
+}
+
+.floating-navbar.show{
+    transform: translateY(0);
+}
+
+.nav-brand{
+    display: none;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.nav-links{
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a{
+    color: var(--egg-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 768px) {
+    .image-title{
+        padding: 55px 16px;
+    }
+
+    .image-title-box{
+        padding: 38px 18px;
+        border-top: 6px solid rgba(249,249,249,0);
+        border-bottom: 6px solid rgba(249,249,249,0);
+    }
+
+    .image-title-text{
+        font-size: 3rem;
+    }
+
     .grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -530,15 +637,91 @@ button:hover,
     }
 
     .countdown {
-        flex-wrap: nowrap;   
+        flex-wrap: nowrap;
         justify-content: space-between;
         gap: 8px;
-        overflow-x: auto;   
+        overflow-x: auto;
     }
 
     .box {
-        flex: 0 0 auto;         
-        min-width: 60px;      
+        flex: 0 0 auto;
+        min-width: 60px;
         padding: 12px 10px;
+    }
+
+    .hero-date {
+        top: 5%;
+        width: 100%;
+    }
+
+    .hero-date .countdown {
+        justify-content: center;
+        gap: 4px;
+        overflow: hidden;
+    }
+
+    .hero-date .box {
+        padding: 4px 6px;
+    }
+
+    .hero-date .box span {
+        font-size: 1.5rem;
+    }
+
+    .floating-navbar{
+        justify-content: flex-end;   /* ícone à direita */
+        padding: 14px 18px;
+        background: transparent;     /* sem barra inicialmente */
+        backdrop-filter: none;
+        box-shadow: none;
+        border: none;
+        flex-wrap: wrap;
+    }
+
+    .nav-brand{
+        display: none; /* remove texto Menu */
+    }
+
+    .menu-toggle{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: rgba(107,115,78,0.95);
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span{
+        width: 24px;
+        height: 2px;
+        background: var(--egg-white);
+        display: block;
+    }
+
+    /* links escondidos */
+    .nav-links{
+        display: none;
+        width: 100%;
+        margin-top: 12px;
+        padding: 18px;
+        border-radius: 14px;
+        background: rgba(107,115,78,0.95);
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    /* ao abrir surge barra expandida */
+    .nav-links.open{
+        display: flex;
+    }
+
+    .nav-links a{
+        color: var(--egg-white);
+        text-decoration: none;
+        font-size: 0.95rem;
+        padding: 4px 0;
     }
 }

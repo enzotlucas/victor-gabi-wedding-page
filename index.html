@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imgs/logo_icon.jpeg" type="image/x-icon">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
     <title>Victor & Gabrielle | Casamento</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,12 +20,55 @@
     <!-- MONOGRAM -->
     <header class="hero section">
         <div class="hero-container container">
-            <img class="logo" src="imgs/logo_teste.png" alt="Victor e Gabrielle">
+            <div class="countdown-wrapper hero-date">
+                <div class="countdown">
+                    <div class="box">
+                        <span>19</span>
+                    </div>
+
+                    <div class="box">
+                        <span>.</span>
+                    </div>
+
+                    <div class="box">
+                        <span>09</span>
+                    </div>
+
+                    <div class="box">
+                        <span>.</span>
+                    </div>
+
+                    <div class="box">
+                        <span>26</span>
+                    </div>
+                </div>
+            </div>
+
+            <img class="logo" src="imgs/logo.png" alt="Victor e Gabrielle">
         </div>
     </header>
 
+    <nav class="floating-navbar" id="floatingNavbar">
+        <div class="nav-brand">Menu</div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#message-section">Mensagem</a>
+            <a href="#map-section">Horário e endereço</a>
+            <a href="#reception-section">Cerimônia</a>
+            <a href="#dresscode-section">Trajes</a>
+            <a href="#attendants-section">Padrinhos e Pais</a>
+            <a href="#registry-section">Presença e presentes</a>
+        </div>
+    </nav>
+
     <!-- THANK YOU & PHOTO -->
-    <section class="message section">
+    <section class="message section" id="message-section">
         <div class="container grid">
             <div class="image-wrapper fade-in">
                 <div class="placeholder-img gray-bg">
@@ -43,7 +86,7 @@
     </section>
 
     <!-- COUNTDOWN -->
-    <section class="countdown-section section">
+    <section class="countdown-section section" id="countdown-section">
         <div class="countdown-wrapper">
             <div class="countdown">
                 <div class="box">
@@ -70,7 +113,7 @@
     </section>
 
     <!-- MAP -->
-    <section class="ceremony section">
+    <section class="map section" id="map-section">
         <div class="container grid">
             <div class="text-block fade-in">
                 <h2 class="label">LOCALIZAÇÃO</h2>
@@ -110,8 +153,13 @@
     </section>
 
     <!-- RECEPTION AND CEREMONY -->
-    <section class="reception section">
+    <section class="reception section" id="reception-section">
         <div class="container grid">
+            <div class="image-wrapper fade-in">
+                <div class="placeholder-img gray-bg">
+                    <span>ESPAÇO</span>
+                </div>
+            </div>
             <div class="text-block fade-in">
                 <p class="label">CASAMENTO</p>
                 <h2 class="title">Recepção e Cerimônia</h2>
@@ -121,19 +169,20 @@
                     Pedimos, com carinho, que cheguem com antecedência, pois após o início não será permitida a
                     entrada.</p>
             </div>
-            <div class="image-wrapper fade-in">
-                <div class="placeholder-img gray-bg">
-                    <span>ESPAÇO</span>
-                </div>
-            </div>
         </div>
     </section>
 
+    <section class="image-title section">
+
+        <div class="image-title-box">
+            <h2 class="image-title-text">Dress code</h2>
+        </div>
+
+    </section>
+
     <!-- DRESS CODE -->
-    <section class="dresscode section">
+    <section class="dresscode section" id="dresscode-section">
         <div class="container fade-in">
-            <p class="label">TRAJES</p>
-            <p class="title">Dress code</p>
             <div class="dresscode-grid">
                 <div class="dresscode-item">
                     <p class="dresscode-description">Para os homens, sugerimos terno com camisa social, sendo opcional o
@@ -156,7 +205,7 @@
     </section>
 
     <!-- BEST MAN -->
-    <section class="attendants section">
+    <section class="attendants section" id="attendants-section">
         <div class="container grid">
             <div class="text-block fade-in">
                 <h2 class="label">PADRINHOS E PAIS</h2>
@@ -180,8 +229,8 @@
                 </p>
 
                 <p class="description">
-                    Essas cores fazem parte da identidade desse dia tão especial, por isso, pedimos com carinho que <strong>não
-                    sejam utilizadas pelos convidados.</strong>
+                    Essas cores fazem parte da identidade desse dia tão especial, por isso, pedimos com carinho que
+                    <strong>não sejam utilizadas pelos convidados.</strong>
                 </p>
                 <div class="palette">
                     <div class="color attendants1"></div>
@@ -195,17 +244,52 @@
                     <div class="carousel-container images">
                         <div class="slide active">
                             <img src="imgs/example.jpg" alt="Enzo">
-                            <p>Enzo</p>
+                            <p>Pais da Noiva</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/example.jpg" alt="Enzo">
+                            <p>Pais do Noivo</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/example.jpg" alt="Enzo">
+                            <p>Enzo e Carol</p>
                         </div>
 
                         <div class="slide">
                             <img src="imgs/example.jpg" alt="Italo">
-                            <p>Italo</p>
+                            <p>Italo e Mayara</p>
                         </div>
 
                         <div class="slide">
-                            <img src="imgs/example.jpg" alt="Matheus">
-                            <p>Matheus</p>
+                            <img src="imgs/example.jpg" alt="Italo">
+                            <p>Luiz e Emily</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/example.jpg" alt="Italo">
+                            <p>Matheus e Pietra</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/example.jpg" alt="Italo">
+                            <p>Almir e Tatiane</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/example.jpg" alt="Italo">
+                            <p>Renan e Gabriela</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/example.jpg" alt="Italo">
+                            <p>Beatriz e Lucas</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="imgs/example.jpg" alt="Italo">
+                            <p>Beatriz e Caio</p>
                         </div>
                     </div>
                 </div>
@@ -214,7 +298,7 @@
     </section>
 
     <!-- REGISTRY -->
-    <section class="registry section">
+    <section class="registry section" id="registry-section">
         <div class="container fade-in">
             <p class="label">PRESENÇA</p>
             <div class="registry-grid">
@@ -247,6 +331,7 @@
     <script src="scripts/attendants.js"></script>
     <script src="scripts/default.js"></script>
     <script src="scripts/countdown.js"></script>
+    <script src="scripts/navbar.js"></script>
 </body>
 
 <script>
