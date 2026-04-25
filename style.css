@@ -1,10 +1,4 @@
 /* PALETTE: Egg-White: #F9F9F9 | Light Gray: #A0A0A0 */
-@font-face {
-    font-family: 'Berlishanty Calligraphy';
-    src: url('fonts/berlishanty-calligraphy.regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 :root {
     --egg-white: #F9F9F9;
@@ -55,7 +49,6 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Cardo', serif;
 }
 
 .countdown {
@@ -207,7 +200,7 @@ body {
 .image-title-text{
     margin: 0;
     color: var(--egg-white);
-    font-family: 'Berlishanty Calligraphy';
+    font-family: 'Alex Brush', cursive;
     font-size: 5.4rem;
     font-weight: 400;
     line-height: 1;
@@ -223,7 +216,7 @@ body {
     letter-spacing: -1px;
     margin-bottom: 30px;
     line-height: 1.1;
-    font-family: 'Berlishanty Calligraphy';
+    font-family: 'Alex Brush', cursive;
 }
 
 .dresscode-description {
