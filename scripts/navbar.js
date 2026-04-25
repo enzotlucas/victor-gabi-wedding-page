@@ -1,16 +1,18 @@
 const hero = document.querySelector('.hero');
 const navbar = document.getElementById('floatingNavbar');
 
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
             navbar.classList.remove('show');
-        }else{
+            if (navLinks.classList.contains('open'))
+                navLinks.classList.remove('open');
+        } else {
             navbar.classList.add('show');
         }
     });
-},{
-    threshold:0
+}, {
+    threshold: 0
 });
 
 observer.observe(hero);
@@ -24,9 +26,8 @@ menuToggle.addEventListener('click', () => {
 });
 
 
-/* fecha ao clicar em item */
-document.querySelectorAll('.nav-links a').forEach(link=>{
-    link.addEventListener('click', ()=>{
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
         navLinks.classList.remove('open');
     });
 });
