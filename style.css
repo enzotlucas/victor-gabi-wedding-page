@@ -31,14 +31,24 @@ body {
 
 .logo {
     position: absolute;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
-    /* ajuste conforme necessário */
+    transition: transform 0.1s linear;   */
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
     transition: transform 0.1s linear;
-    /* filter:
-        drop-shadow(0 0 10px white) drop-shadow(0 0 10px white); */
+}
+
+#monogram {
+    display: none;
+}
+
+#fullname {
+    display: block;
 }
 
 .countdown-wrapper {
@@ -79,6 +89,7 @@ body {
     color: var(--egg-white);
 }
 
+/* 
 .hero {
     background: #6b734e;
     position: relative;
@@ -101,11 +112,25 @@ body {
     opacity: 0.3;
 
     z-index: 0;
+} */
+
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('imgs/pre_wedding_10.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .hero-date {
     position: absolute;
-    top: 40px;
+    /* top: 40px; */
+    bottom: 40px;
+    top: auto;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -164,12 +189,13 @@ body {
     background-position: center;
 }
 
-.image-title{
+.image-title {
     position: relative;
 
     background-image:
-        linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)),
-        url('imgs/wedding.png'); /* troque pela imagem desejada */
+        linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
+        url('imgs/wedding.png');
+    /* troque pela imagem desejada */
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -183,11 +209,11 @@ body {
 }
 
 /* caixa central semelhante à referência */
-.image-title-box{
+.image-title-box {
     width: min(100%, 920px);
     padding: 70px 40px;
 
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(1px);
 
     display: flex;
@@ -197,7 +223,7 @@ body {
 }
 
 /* texto manuscrito central */
-.image-title-text{
+.image-title-text {
     margin: 0;
     color: var(--egg-white);
     font-family: 'Alex Brush', cursive;
@@ -206,7 +232,7 @@ body {
     line-height: 1;
     text-align: center;
 
-    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -493,12 +519,12 @@ button:hover,
     font-size: 14px;
 }
 
-.floating-navbar{
+.floating-navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(107,115,78,0.95);
+    background: rgba(107, 115, 78, 0.95);
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
@@ -510,24 +536,24 @@ button:hover,
     transition: transform 0.35s ease;
 }
 
-.floating-navbar.show{
+.floating-navbar.show {
     transform: translateY(0);
 }
 
-.nav-brand{
+.nav-brand {
     display: none;
 }
 
-.menu-toggle{
+.menu-toggle {
     display: none;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     gap: 28px;
 }
 
-.nav-links a{
+.nav-links a {
     color: var(--egg-white);
     text-decoration: none;
     font-size: 0.95rem;
@@ -535,17 +561,17 @@ button:hover,
 }
 
 @media (max-width: 768px) {
-    .image-title{
+    .image-title {
         padding: 55px 16px;
     }
 
-    .image-title-box{
+    .image-title-box {
         padding: 38px 18px;
-        border-top: 6px solid rgba(249,249,249,0);
-        border-bottom: 6px solid rgba(249,249,249,0);
+        border-top: 6px solid rgba(249, 249, 249, 0);
+        border-bottom: 6px solid rgba(249, 249, 249, 0);
     }
 
-    .image-title-text{
+    .image-title-text {
         font-size: 3rem;
     }
 
@@ -619,7 +645,17 @@ button:hover,
     }
 
     .logo {
-        width: 100%;
+        /* width: 100%; */
+        width: 30%;
+        top: 20%;
+    }
+
+    #monogram {
+        display: block;
+    }
+
+    #fullname {
+        display: none;
     }
 
     .countdown-wrapper {
@@ -650,7 +686,9 @@ button:hover,
     }
 
     .hero-date {
-        top: 5%;
+        /* top: 5%; */
+        bottom: 24px;
+        top: auto;
         width: 100%;
     }
 
@@ -668,32 +706,35 @@ button:hover,
         font-size: 1.5rem;
     }
 
-    .floating-navbar{
-        justify-content: flex-end;   /* ícone à direita */
+    .floating-navbar {
+        justify-content: flex-end;
+        /* ícone à direita */
         padding: 14px 18px;
-        background: transparent;     /* sem barra inicialmente */
+        background: transparent;
+        /* sem barra inicialmente */
         backdrop-filter: none;
         box-shadow: none;
         border: none;
         flex-wrap: wrap;
     }
 
-    .nav-brand{
-        display: none; /* remove texto Menu */
+    .nav-brand {
+        display: none;
+        /* remove texto Menu */
     }
 
-    .menu-toggle{
+    .menu-toggle {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        background: rgba(107,115,78,0.95);
+        background: rgba(107, 115, 78, 0.95);
         border: none;
         padding: 10px;
         border-radius: 10px;
         cursor: pointer;
     }
 
-    .menu-toggle span{
+    .menu-toggle span {
         width: 24px;
         height: 2px;
         background: var(--egg-white);
@@ -701,24 +742,24 @@ button:hover,
     }
 
     /* links escondidos */
-    .nav-links{
+    .nav-links {
         display: none;
         width: 100%;
         margin-top: 12px;
         padding: 18px;
         border-radius: 14px;
-        background: rgba(107,115,78,0.95);
+        background: rgba(107, 115, 78, 0.95);
         backdrop-filter: blur(8px);
         flex-direction: column;
         gap: 14px;
     }
 
     /* ao abrir surge barra expandida */
-    .nav-links.open{
+    .nav-links.open {
         display: flex;
     }
 
-    .nav-links a{
+    .nav-links a {
         color: var(--egg-white);
         text-decoration: none;
         font-size: 0.95rem;
