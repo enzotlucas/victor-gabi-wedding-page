@@ -189,13 +189,12 @@ body {
     background-position: center;
 }
 
-.image-title {
+.dresscode-title {
     position: relative;
 
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
-        url('imgs/wedding.png');
-    /* troque pela imagem desejada */
+        url('imgs/pre_wedding_56.jpg');
 
     background-size: cover;
     background-repeat: no-repeat;
