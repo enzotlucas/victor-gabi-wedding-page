@@ -518,6 +518,28 @@ button:hover,
     font-size: 14px;
 }
 
+.reception {
+    background-color: #6b734e;
+}
+
+.reception .label,
+.reception .description {
+    color: var(--egg-white);
+}
+
+.reception .title {
+    color: #DFE3D0;
+}
+
+.reception-img {
+    width: 100%;
+    display: block;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+    transform: scale(1.35);
+    transform-origin: center center;
+}
+
 .floating-navbar {
     position: fixed;
     top: 0;
@@ -699,6 +721,10 @@ button:hover,
 
     .hero-date .box {
         padding: 4px 6px;
+    }
+
+    .reception-img {
+        transform: none;
     }
 
     .hero-date .box span {
