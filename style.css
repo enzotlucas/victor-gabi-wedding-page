@@ -773,7 +773,6 @@ button:hover,
     }
 
     .hero-date {
-        /* top: 5%; */
         bottom: 24px;
         top: auto;
         width: 100%;
@@ -857,6 +856,6 @@ button:hover,
     }
 
     .footer-logo {
-        width: min(180px, 45%);
+        width: min(150px, 40%);
     }
 }
