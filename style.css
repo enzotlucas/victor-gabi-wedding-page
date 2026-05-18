@@ -56,11 +56,6 @@ body {
     transform: translateX(-50%);
 }
 
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
 
 .box {
     color: var(--egg-white);
@@ -150,7 +145,7 @@ body {
 
 .countdown-section {
     position: relative;
-    overflow: hidden;
+    overflow: hidden;   
 }
 
 .countdown-section::before {
@@ -365,23 +360,199 @@ button:hover,
 
 
 .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.countdown {
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.box {
-    min-width: 70px;
-    padding: 15px 18px;
+
+.invite-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.9s ease;
+    perspective: 1200px;
 }
 
-.box span {
-    font-size: 3rem;
+.invite-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
 }
 
-.box small {
-    font-size: 1rem;
+.invite-hint {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(249, 249, 249, 0.55);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation: hint-pulse 2.5s ease-in-out infinite;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
+.invite-overlay.opening .invite-hint {
+    opacity: 0;
+}
+
+@keyframes hint-pulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* ── Convite plano ── */
+.invite-card {
+    position: relative;
+    width: min(320px, 78vw);
+    aspect-ratio: 4 / 5.5;
+    background: var(--egg-white);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5), 0 6px 18px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 3px solid rgba(160, 160, 160, 0.25);
+    transform-origin: center center;
+    transition:
+        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.7s,
+        opacity 0.6s ease 0.75s;
+}
+
+.invite-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    z-index: 1;
+    transform: scale(1.15);
+}
+
+.invite-monogram {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    z-index: 2;
+    filter: invert(27%) sepia(18%) saturate(600%) hue-rotate(50deg) brightness(40%) contrast(90%);
+    opacity: 0.3;
+}
+
+/* ── SVG das cordas — cobre o card inteiro, overflow visível ── */
+.invite-ropes {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Cada corda individual */
+.rope {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 0;
+    transition: none;
+}
+
+/* ── Lacre de cera ── */
+.wax-seal {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(72px, 20vw);
+    height: min(72px, 20vw);
+    border-radius: 50%;
+    background: radial-gradient(circle at 38% 35%,
+            #c49a52 0%,
+            #a3762e 45%,
+            #7a5218 75%,
+            #5c3c10 100%);
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.45),
+        inset 0 2px 5px rgba(255, 220, 130, 0.35),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    transition: opacity 0.3s ease 0.5s, transform 0.3s ease 0.5s;
+}
+
+/* brilho interno */
+.wax-seal::before {
+    content: '';
+    position: absolute;
+    inset: 18%;
+    background: radial-gradient(circle at 40% 35%,
+            rgba(255, 220, 130, 0.22) 0%,
+            transparent 65%);
+    border-radius: 50%;
+}
+
+/* ── Animação de corte das cordas ── */
+.invite-overlay.opening .rope-1 {
+    animation: cut-rope 0.45s cubic-bezier(0.4, 0, 1, 1) 0s forwards;
+}
+
+.invite-overlay.opening .rope-2 {
+    animation: cut-rope 0.45s cubic-bezier(0.4, 0, 1, 1) 0.08s forwards;
+}
+
+.invite-overlay.opening .rope-3 {
+    animation: cut-rope 0.35s cubic-bezier(0.4, 0, 1, 1) 0.15s forwards;
+}
+
+@keyframes cut-rope {
+    0% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    60% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: 700;
+        opacity: 0;
+    }
+}
+
+/* Lacre some suavemente após as cordas */
+.invite-overlay.opening .wax-seal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.85);
+}
+
+/* Convite fecha/vira revelando o site */
+.invite-overlay.opening .invite-card {
+    transform: rotateX(90deg);
+    opacity: 0;
+}
 @media (min-width: 769px) {
     .countdown-section {
         min-height: 720px;
@@ -687,6 +858,18 @@ button:hover,
 }
 
 @media (max-width: 768px) {
+    /* .countdown-section .box span {
+        font-size: 1.7rem;
+    }
+
+    .countdown-section .box small {
+        font-size: 1rem;
+    } */
+
+    .countdown-section .countdown {
+        width: 100%;
+    }
+
     .countdown-bg-left {
         background-image: url('imgs/pre_wedding_42.jpg');
     }

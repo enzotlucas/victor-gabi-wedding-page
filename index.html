@@ -11,13 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=CormorantGaramond:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    
     <!-- MONOGRAM -->
     <header class="hero section">
         <div class="hero-container container">
@@ -327,10 +327,9 @@
                     <p class="description">
                         Caso deseje nos presentear, selecionamos algumas opções em nossa lista virtual.
                     </p>
-                    <a class="btn-outline"
-                        href="https://casamento-y12m.listaideal.com.br/pt">
+                    <a class="btn-outline" href="https://casamento-y12m.listaideal.com.br/pt">
                         ACESSAR LISTA
-                    </a>                    
+                    </a>
                 </div>
             </div>
         </div>
@@ -348,16 +347,35 @@
             <div class="footer-overlay">
                 <img src="imgs/logo.png" alt="V & G" class="footer-logo">
             </div>
-        </div>  
+        </div>
         <div class="footer-credits">
             <p>V & G — 2026</p>
         </div>
     </footer>
 
+    <div id="invite-overlay" class="invite-overlay">
+        <div class="invite-hint">toque para abrir</div>
+        <div class="invite-card">
+            <img src="imgs/logo.png" alt="V & G" class="invite-monogram" />
+            <img src="imgs/green_reception.png" alt="" class="invite-bg-img" />
+
+            <svg class="invite-ropes" viewBox="0 0 320 480" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <line class="rope rope-1" x1="-10" y1="190" x2="330" y2="250" stroke="#b8963e" stroke-width="1.8" stroke-linecap="round"></line>
+                <line class="rope rope-2" x1="-10" y1="260" x2="330" y2="170" stroke="#b8963e" stroke-width="1.8" stroke-linecap="round"></line>
+                <line class="rope rope-3" x1="-10" y1="220" x2="330" y2="220" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" opacity="0.6"></line>
+            </svg>
+
+            <div class="wax-seal"></div>
+
+        </div>
+    </div>
+
     <script src="scripts/attendants.js"></script>
     <script src="scripts/default.js"></script>
     <script src="scripts/countdown.js"></script>
     <script src="scripts/navbar.js"></script>
+    <script src="scripts/invite.js"></script>
     <script src="scripts/footer.js"></script>
 </body>
 
