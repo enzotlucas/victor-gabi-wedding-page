@@ -145,7 +145,7 @@ body {
 
 .countdown-section {
     position: relative;
-    overflow: hidden;   
+    overflow: hidden;
 }
 
 .countdown-section::before {
@@ -485,9 +485,11 @@ button:hover,
     top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(72px, 20vw);
-    height: min(72px, 20vw);
-    border-radius: 50%;
+
+    width: min(110px, 28vw);
+    height: min(110px, 28vw);
+
+    /* border-radius: 50%;
     background: radial-gradient(circle at 38% 35%,
             #c49a52 0%,
             #a3762e 45%,
@@ -496,8 +498,15 @@ button:hover,
     box-shadow:
         0 4px 14px rgba(0, 0, 0, 0.45),
         inset 0 2px 5px rgba(255, 220, 130, 0.35),
-        inset 0 -2px 6px rgba(0, 0, 0, 0.3);
+        inset 0 -2px 6px rgba(0, 0, 0, 0.3); */
+
+    background-image: url('imgs/wax_seal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
     z-index: 10;
+
     transition: opacity 0.3s ease 0.5s, transform 0.3s ease 0.5s;
 }
 
@@ -509,10 +518,10 @@ button:hover,
     background: radial-gradient(circle at 40% 35%,
             rgba(255, 220, 130, 0.22) 0%,
             transparent 65%);
+
     border-radius: 50%;
 }
 
-/* ── Animação de corte das cordas ── */
 .invite-overlay.opening .rope-1 {
     animation: cut-rope 0.45s cubic-bezier(0.4, 0, 1, 1) 0s forwards;
 }
@@ -542,17 +551,16 @@ button:hover,
     }
 }
 
-/* Lacre some suavemente após as cordas */
 .invite-overlay.opening .wax-seal {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.85);
 }
 
-/* Convite fecha/vira revelando o site */
 .invite-overlay.opening .invite-card {
     transform: rotateX(90deg);
     opacity: 0;
 }
+
 @media (min-width: 769px) {
     .countdown-section {
         min-height: 720px;
