@@ -1,0 +1,82 @@
+
+.dresscode-title {
+    position: relative;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
+        url('../imgs/pre_wedding_56.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px 20px;
+}
+
+.image-title-box {
+    width: min(100%, 920px);
+    padding: 70px 40px;
+
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(1px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image-title-text {
+    margin: 0;
+    color: var(--egg-white);
+    font-family: 'Alex Brush', cursive;
+    font-size: 5.4rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.dresscode-description {
+    font-size: 1.1rem;
+    max-width: 450px;
+    margin: 1%;
+}
+
+.dresscode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.dresscode-item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+    .image-title {
+        padding: 55px 16px;
+    }
+
+    .image-title-box {
+        padding: 38px 18px;
+        border-top: 6px solid rgba(249, 249, 249, 0);
+        border-bottom: 6px solid rgba(249, 249, 249, 0);
+    }
+
+    .image-title-text {
+        font-size: 3rem;
+    }
+    
+    .dresscode-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

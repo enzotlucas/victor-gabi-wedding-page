@@ -1,0 +1,114 @@
+
+.countdown-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.countdown-section .countdown-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 0;
+}
+
+.countdown-bg-half {
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+
+.countdown-bg-left {
+    background-image: url('../imgs/pre_wedding_42.jpg');
+    background-position: center right;
+}
+
+.countdown-bg-right {
+    background-image: url('../imgs/pre_wedding_46.jpg');
+    background-position: center left;
+}
+
+
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 769px) {
+    .countdown-section {
+        min-height: 720px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .countdown-section .countdown-wrapper {
+        left: auto;
+        transform: none;
+        width: auto;
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+
+    .countdown-section .box span {
+        font-size: 6rem;
+    }
+
+    .countdown-section .box small {
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+    }
+
+    .countdown-section .box {
+        min-width: 120px;
+        padding: 20px 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .countdown-section .countdown {
+        width: 100%;
+    }
+
+    .countdown-bg-left {
+        background-image: url('../imgs/pre_wedding_42.jpg');
+    }
+
+    .countdown-bg-right {
+        display: none;
+    }
+
+    .countdown-wrapper {
+        text-align: center;
+        margin-top: auto;
+        padding-bottom: 40px;
+        width: 100%;
+    }
+
+    .countdown {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 8px;
+        overflow-x: auto;
+    }
+}

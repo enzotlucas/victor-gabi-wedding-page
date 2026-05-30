@@ -1,0 +1,159 @@
+
+.gallery {
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item {
+    aspect-ratio: 16/9;
+}
+
+.attendants1 {
+    background: #D3A7AE;
+}
+
+.attendants2 {
+    background: #D9CBB8;
+}
+
+.attendants3 {
+    background: #B8CDAA;
+}
+
+.attendants4 {
+    background: #A9A9AD;
+}
+
+
+.palette {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+
+.attendants-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+    align-items: start;
+}
+
+.attendant-item {
+    text-align: center;
+}
+
+.attendant-item img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    /* mantém proporção igual sempre */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.attendant-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.images {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.images img {
+    border-radius: 6px;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+.carousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.carousel-container {
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.color {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.color+.color {
+    margin-left: -18px;
+}
+
+@media (max-width: 768px) {
+    
+    .carousel-button {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .carousel-container {
+        max-width: 220px;
+    }
+
+    .slide img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .slide.active {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+    }
+}

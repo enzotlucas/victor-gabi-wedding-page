@@ -1,0 +1,86 @@
+
+#monogram {
+    display: none;
+}
+
+.monogram {
+    font-size: 8rem;
+    font-weight: 300;
+    letter-spacing: -4px;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../imgs/pre_wedding_10.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-date {
+    position: absolute;
+    bottom: 40px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.hero-date .box {
+    min-width: auto;
+    padding: 8px 12px;
+    background: transparent;
+}
+
+.hero-date .box span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--egg-white);
+    line-height: 1;
+}
+
+
+@media (max-width: 768px) {
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #monogram {
+        display: block;
+    }
+
+    .monogram {
+        font-size: 4rem;
+    }
+    
+    .hero-date {
+        bottom: 24px;
+        top: auto;
+        width: 100%;
+    }
+
+    .hero-date .countdown {
+        justify-content: center;
+        gap: 4px;
+        overflow: hidden;
+    }
+
+    .hero-date .box {
+        padding: 4px 6px;
+    }
+
+    .hero-date .box span {
+        font-size: 1.5rem;
+    }
+}
