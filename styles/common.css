@@ -232,10 +232,45 @@ button:hover,
     transform-origin: center center;
 }
 
+.message {
+    position: relative;
+    overflow: hidden;
+}
 
+.message .container {
+    position: relative;
+    z-index: 1;
+}
+
+.message-decoration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 480px;
+    max-width: 33%;
+    height: auto;
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.message .text-block .description {
+     max-width: none;
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+    margin-bottom: 2%;
+ }
 
 @media (max-width: 768px) {
-    
+    .message-decoration {
+        width: 150%;
+        max-width: 150%;
+        transform: translateX(30%);
+    }
+
     .grid {
         grid-template-columns: 1fr;
         gap: 40px;
