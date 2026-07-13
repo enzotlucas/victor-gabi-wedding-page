@@ -109,6 +109,7 @@ body {
 .description {
     font-size: 1.1rem;
     max-width: 450px;
+    text-align: justify;
 }
 
 .grid {
@@ -257,8 +258,7 @@ button:hover,
 }
 
 .message .text-block .description {
-     max-width: none;
-    text-align: justify;
+    max-width: none;
     text-align-last: left;
     hyphens: auto;
     margin-bottom: 2%;
