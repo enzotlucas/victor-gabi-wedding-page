@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+    <title>Página não encontrada | Victor & Gabrielle</title>
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+    <style>
+        .not-found-section {
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding: 120px 20px;
+            background-color: var(--secondary-color);
+        }
+
+        .not-found-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .not-found-code {
+            font-size: 6rem;
+            line-height: 1;
+            color: var(--egg-white);
+            margin-bottom: 0;
+        }
+
+        .not-found-title {
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: var(--egg-white);
+        }
+
+        .not-found-description {
+            margin: 0 auto 40px;
+            color: var(--egg-white);
+            text-align: center;
+        }
+
+        .not-found-logo {
+            width: 90px;
+            margin-bottom: 30px;
+            opacity: 0.85;
+            filter: brightness(0) invert(1);
+        }
+
+        .not-found-section .btn-outline {
+            border-color: var(--egg-white);
+            color: var(--egg-white);
+        }
+
+        .not-found-section .btn-outline:hover {
+            background-color: var(--egg-white);
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .not-found-code {
+                font-size: 4rem;
+            }
+
+            .not-found-title {
+                font-size: 1.4rem;
+            }
+
+            .not-found-section {
+                padding: 80px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="not-found-section">
+        <div class="not-found-container fade-in">
+            <img src="imgs/logo.png" alt="V & G" class="not-found-logo">
+
+            <div class="title not-found-code">404</div>
+            <div class="title not-found-title">Ops... este caminho não leva ao altar</div>
+            <p class="description not-found-description">
+                A página que você procura não existe ou foi movida. <br />
+                Que tal voltar para celebrar com a gente?
+            </p>
+
+            <a href="https://victoregabi.com/" class="btn-outline">VOLTAR PARA O INÍCIO</a>
+        </div>
+    </section>
+</body>
+
+<script src="scripts/default.js"></script>
+
+</html>
