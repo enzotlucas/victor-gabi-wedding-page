@@ -106,6 +106,7 @@ body {
 }
 
 
+
 .description {
     font-size: 1.1rem;
     max-width: 450px;
@@ -145,6 +146,11 @@ body {
     margin-top: auto;
 }
 
+.registry-item .btn-outline:hover {
+    background-color: #6b734e;
+    border-color: #6b734e;
+    color: var(--egg-white);
+}
 
 .placeholder-img {
     aspect-ratio: 4/5;
