@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/attendants.css">
+    <link rel="stylesheet" href="styles/schedule.css">
     <link rel="stylesheet" href="styles/invite.css">
     <link rel="stylesheet" href="styles/countdown.css">
     <link rel="stylesheet" href="styles/monogram.css">
@@ -94,7 +95,8 @@
             <a href="#reception-section">Cerimônia</a>
             <a href="#attendants-section">Padrinhos e Pais</a>
             <a href="#dresscode-section">Trajes</a>
-            <a href="#registry-section">Presença e presentes</a>
+            <a href="#schedule-section">Cronograma</a>
+            <a href="#registry-section">Presença, presentes e memórias</a>
         </div>
     </nav>
 
@@ -218,7 +220,8 @@
                     Pedimos, com carinho, que cheguem com antecedência, pois após o início não será permitida a
                     entrada.</p>
                 <p class="description">
-                    É importante lembrar que o local <strong>não possui estacionamento</strong> e é <strong>proibido estacionar</strong>
+                    É importante lembrar que o local <strong>não possui estacionamento</strong> e é <strong>proibido
+                        estacionar</strong>
                     na Avenida Angélica.
                     Por conta disso, recomendamos fortemente usar um aplicativo de corridas (Uber).
                 </p>
@@ -351,12 +354,71 @@
         </div>
     </section>
 
+    <!-- SCHEDULE -->
+    <section class="schedule-section section" id="schedule-section">
+        <div class="schedule-bg">
+            <div class="schedule-bg-half schedule-bg-left"></div>
+            <div class="schedule-bg-half schedule-bg-right"></div>
+        </div>
+        <div class="schedule-bg-overlay"></div>
+        <div class="schedule-wrapper">
+            <p class="label">CASAMENTO</p>
+            <h2 class="title">Cronograma do dia</h2>
+            <div class="schedule-list">
+                <div class="schedule-item">
+                    <span class="schedule-time">16:10</span>
+                    <div class="schedule-content">
+                        <p class="schedule-event">Abertura do espaço</p>
+                        <p class="schedule-description">Casa Quintal — chegada dos convidados.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <span class="schedule-time">16:30</span>
+                    <div class="schedule-content">
+                        <p class="schedule-event">Cerimônia</p>
+                        <p class="schedule-description">Início pontual. Pedimos, com carinho, que cheguem com
+                            antecedência, pois após o início não será permitida a entrada.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <span class="schedule-time">--:--</span>
+                    <div class="schedule-content">
+                        <p class="schedule-event">Em aberto</p>
+                        <p class="schedule-description">Detalhes em breve.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <span class="schedule-time">--:--</span>
+                    <div class="schedule-content">
+                        <p class="schedule-event">Em aberto</p>
+                        <p class="schedule-description">Detalhes em breve.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <span class="schedule-time">01:30</span>
+                    <div class="schedule-content">
+                        <p class="schedule-event">Encerramento da festa</p>
+                        <p class="schedule-description">Pedimos organização, pois o espaço fechará às 01:50.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="schedule-note">
+                Lembrete: o local não possui estacionamento e é proibido estacionar na Avenida Angélica.
+                Recomendamos fortemente usar um aplicativo de corridas (Uber).
+            </p>
+        </div>
+    </section>
+
     <!-- REGISTRY -->
     <section class="registry section" id="registry-section">
         <div class="container fade-in">
-            <p class="label">PRESENÇA E PRESENTES</p>
+            <p class="label">PRESENÇA, PRESENTES E MEMÓRIAS</p>
             <div class="registry-grid">
-                <div class="registry-item ">
+                <div class="registry-item registry-item-share">
                     <h2 class="title">Confirme sua presença</h2>
                     <p class="description">
                         Ficaremos muito felizes em contar com sua presença, por favor confirme até 19.08.
@@ -367,7 +429,7 @@
                     </a>
                 </div>
 
-                <div class="registry-item">
+                <div class="registry-item registry-item-share">
                     <h2 class="title">Lista de presentes</h2>
                     <p class="description">
                         Caso deseje nos presentear, colocamos algumas opções em nossa lista virtual para nossa lua de
@@ -376,6 +438,22 @@
                     <a class="btn-outline" href="https://casamentovg.listaideal.com.br/pt/">
                         ACESSAR LISTA
                     </a>
+                </div>
+
+                <div class="registry-item registry-item-share">
+                    <h2 class="title">Compartilhe seu amor</h2>
+                    <p class="description desktop-only">
+                        Compartilhe conosco os momentos que capturar durante o nosso dia tão especial, basta escanear
+                        o QR ou clicar no botão e publicar suas fotos!
+                    </p>
+                    <p class="description mobile-only">
+                        Compartilhe conosco os momentos que capturar durante o nosso dia tão especial, basta clicar
+                        no botão e publicar suas fotos!
+                    </p>
+                    <a class="btn-outline" href="https://web.dotstheapp.com/a?group=2528795&dlBy=gabeanw&code=BoxWBjRDnGTJ&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1">
+                        COMPARTILHAR FOTOS
+                    </a>
+                    <img src="imgs/qrcode.jpg" alt="QR Code para compartilhar fotos" class="qrcode-img desktop-only">
                 </div>
             </div>
         </div>

@@ -133,8 +133,13 @@ body {
 
 .registry-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 80px;
+}
+
+.registry-item-share {
+    position: relative;
+    padding-bottom: 176px;
 }
 
 .registry-item {
@@ -150,6 +155,19 @@ body {
     background-color: #6b734e;
     border-color: #6b734e;
     color: var(--egg-white);
+}
+
+.qrcode-img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 160px;
+}
+
+.mobile-only {
+    display: none;
 }
 
 .placeholder-img {
@@ -268,13 +286,25 @@ button:hover,
     text-align-last: left;
     hyphens: auto;
     margin-bottom: 2%;
- }
+}
 
 @media (max-width: 768px) {
     .message-decoration {
         width: 150%;
         max-width: 150%;
         transform: translateX(30%);
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .registry-item-share {
+        padding-bottom: 0;
     }
 
     .grid {
