@@ -1,4 +1,3 @@
-
 const targetDate = new Date("2026-09-19T16:15:00");
 const oneSecond = 1000;
 

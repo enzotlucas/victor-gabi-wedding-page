@@ -38,21 +38,9 @@ body {
     transition: transform 0.1s linear;
 }
 
-
 #fullname {
     display: block;
 }
-
-.countdown-wrapper {
-    text-align: center;
-    margin-top: auto;
-    text-align: center;
-    padding-bottom: 40px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 
 .box {
     color: var(--egg-white);
@@ -95,7 +83,6 @@ body {
     display: block;
 }
 
-
 .title {
     font-size: 2.5rem;
     font-weight: 400;
@@ -104,8 +91,6 @@ body {
     line-height: 1.1;
     font-family: 'Alex Brush', cursive;
 }
-
-
 
 .description {
     font-size: 1.1rem;
@@ -131,25 +116,8 @@ body {
     letter-spacing: 0.1rem;
 }
 
-.registry-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-}
-
-.registry-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.registry-item .btn-outline {
-    margin-top: auto;
-}
-
-.registry-item .btn-outline:hover {
-    background-color: #6b734e;
-    border-color: #6b734e;
-    color: var(--egg-white);
+.mobile-only {
+    display: none;
 }
 
 .placeholder-img {
@@ -168,7 +136,6 @@ body {
     justify-content: center;
     gap: 1%
 }
-
 
 button,
 .btn-outline {
@@ -268,7 +235,7 @@ button:hover,
     text-align-last: left;
     hyphens: auto;
     margin-bottom: 2%;
- }
+}
 
 @media (max-width: 768px) {
     .message-decoration {
@@ -277,6 +244,15 @@ button:hover,
         transform: translateX(30%);
     }
 
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    
     .grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -300,18 +276,6 @@ button:hover,
         gap: 1%
     }
 
-    .registry-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .registry-item+.registry-item {
-        border-top: 1px solid var(--border-color);
-        margin-top: 40px;
-        padding-top: 40px;
-    }
-
-
     .logo {
         width: 30%;
         top: 15%;
@@ -319,13 +283,6 @@ button:hover,
 
     #fullname {
         display: none;
-    }
-
-    .countdown-wrapper {
-        text-align: center;
-        margin-top: auto;
-        padding-bottom: 40px;
-        width: 100%;
     }
 
     .box {
