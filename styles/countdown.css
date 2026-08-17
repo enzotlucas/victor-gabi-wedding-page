@@ -13,6 +13,16 @@
     pointer-events: none;
 }
 
+.countdown-wrapper {
+    text-align: center;
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .countdown-section .countdown-wrapper {
     position: relative;
     z-index: 2;
@@ -33,12 +43,12 @@
 }
 
 .countdown-bg-left {
-    background-image: url('../imgs/pre_wedding_42.jpg');
+    background-image: url('../imgs/countdown/countdown_background_left.jpg');
     background-position: center right;
 }
 
 .countdown-bg-right {
-    background-image: url('../imgs/pre_wedding_46.jpg');
+    background-image: url('../imgs/countdown/countdown_background_right.jpg');
     background-position: center left;
 }
 
@@ -52,6 +62,13 @@
 }
 
 @media (min-width: 769px) {
+    .countdown-wrapper {
+        text-align: center;
+        margin-top: auto;
+        padding-bottom: 40px;
+        width: 100%;
+    }
+    
     .countdown-section {
         min-height: 720px;
         padding: 0;
@@ -91,7 +108,7 @@
     }
 
     .countdown-bg-left {
-        background-image: url('../imgs/pre_wedding_42.jpg');
+        background-image: url('../imgs/countdown_background_left.jpg');
     }
 
     .countdown-bg-right {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/registry.css">
     <link rel="stylesheet" href="styles/attendants.css">
     <link rel="stylesheet" href="styles/schedule.css">
     <link rel="stylesheet" href="styles/invite.css">
@@ -29,8 +30,8 @@
     <div id="invite-overlay" class="invite-overlay">
         <div class="invite-hint">toque para abrir</div>
         <div class="invite-card fade-in">
-            <img src="imgs/logo.png" alt="V & G" class="invite-monogram" />
-            <img src="imgs/green_reception.png" alt="" class="invite-bg-img" />
+            <img src="imgs/common/logo.png" alt="V & G" class="invite-monogram" />
+            <img src="imgs/invite/green_reception.png" alt="" class="invite-bg-img" />
 
             <svg class="invite-ropes" viewBox="0 0 320 480" preserveAspectRatio="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -50,8 +51,8 @@
     <!-- MONOGRAM -->
     <header class="hero section">
         <div class="hero-container container">
-            <img class="logo" id="fullname" src="imgs/names_b.png" alt="Victor e Gabrielle">
-            <img class="logo" id="monogram" src="imgs/logo.png" alt="Victor e Gabrielle">
+            <img class="logo" id="fullname" src="imgs/hero/names_white.png" alt="Victor e Gabrielle">
+            <img class="logo" id="monogram" src="imgs/common/logo.png" alt="Victor e Gabrielle">
 
             <div class="countdown-wrapper hero-date">
                 <div class="countdown">
@@ -102,10 +103,10 @@
 
     <!-- THANK YOU & PHOTO -->
     <section class="message section" id="message-section">
-        <img src="imgs/history_background.png" alt="" class="message-decoration" aria-hidden="true">
+        <img src="imgs/history/history_background.png" alt="" class="message-decoration" aria-hidden="true">
         <div class="container grid">
             <div class="image-wrapper fade-in">
-                <img src="imgs/pre_wedding_98.jpg" alt="Victor e Gabrielle" class="history-img">
+                <img src="imgs/history/history_image.jpg" alt="Victor e Gabrielle" class="history-img">
             </div>
             <div class="text-block fade-in">
                 <p class="label">NOSSA HISTÓRIA</p>
@@ -209,7 +210,7 @@
     <section class="reception section" id="reception-section">
         <div class="container grid">
             <div class="image-wrapper fade-in">
-                <img src="imgs/reception.png" alt="Espaço da cerimônia" class="reception-img">
+                <img src="imgs/reception/reception_image.png" alt="Espaço da cerimônia" class="reception-img">
             </div>
             <div class="text-block fade-in">
                 <p class="label">CASAMENTO</p>
@@ -324,7 +325,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- DRESS CODE -->
     <section class="dresscode-title section" id="dresscode-section">
@@ -444,32 +444,44 @@
                     <h2 class="title">Compartilhe seu amor</h2>
                     <p class="description desktop-only">
                         Compartilhe conosco os momentos que capturar durante o nosso dia tão especial, basta escanear
-                        o QR ou clicar no botão e publicar suas fotos!
+                        o QR Code ou clicar no botão para publicar suas fotos!
                     </p>
                     <p class="description mobile-only">
                         Compartilhe conosco os momentos que capturar durante o nosso dia tão especial, basta clicar
                         no botão e publicar suas fotos!
                     </p>
-                    <a class="btn-outline" href="https://web.dotstheapp.com/a?group=2528795&dlBy=gabeanw&code=BoxWBjRDnGTJ&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1">
-                        COMPARTILHAR FOTOS
-                    </a>
-                    <img src="imgs/qrcode.jpg" alt="QR Code para compartilhar fotos" class="qrcode-img desktop-only">
+                    <div class="registry-buttons">
+                        <a class="btn-outline"
+                            href="https://web.dotstheapp.com/a?group=2528795&dlBy=gabeanw&code=BoxWBjRDnGTJ&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1">
+                            ACESSAR SITE
+                        </a>
+                        <a class="btn-outline desktop-only" id="open-qrcode-modal">
+                            VER QR CODE
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- QR CODE MODAL -->
+    <div class="qrcode-modal-overlay desktop-only" id="qrcode-modal-overlay">
+        <div class="qrcode-modal" id="qrcode-modal">
+            <img src="imgs/registry/qrcode.jpg" alt="QR Code para compartilhar fotos" class="qrcode-modal-img">
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-carousel">
             <div class="footer-carousel-track">
-                <div class="footer-slide"><img src="imgs/pre_wedding_13.jpg" alt=""></div>
-                <div class="footer-slide"><img src="imgs/pre_wedding_102.jpg" alt=""></div>
-                <div class="footer-slide"><img src="imgs/pre_wedding_32.jpg" alt=""></div>
-                <div class="footer-slide"><img src="imgs/pre_wedding_107.jpg" alt=""></div>
+                <div class="footer-slide"><img src="imgs/footer/pre_wedding_13.jpg" alt=""></div>
+                <div class="footer-slide"><img src="imgs/footer/pre_wedding_102.jpg" alt=""></div>
+                <div class="footer-slide"><img src="imgs/footer/pre_wedding_32.jpg" alt=""></div>
+                <div class="footer-slide"><img src="imgs/footer/pre_wedding_107.jpg" alt=""></div>
             </div>
             <div class="footer-overlay">
-                <img src="imgs/logo.png" alt="V & G" class="footer-logo">
+                <img src="imgs/common/logo.png" alt="V & G" class="footer-logo">
             </div>
         </div>
         <div class="footer-credits">
@@ -483,6 +495,7 @@
     <script src="scripts/navbar.js"></script>
     <script src="scripts/invite.js"></script>
     <script src="scripts/footer.js"></script>
++    <script src="scripts/qrcode-modal.js"></script>
 </body>
 
 <script>

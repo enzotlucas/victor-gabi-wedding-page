@@ -1,4 +1,3 @@
-
 (function () {
     const overlay = document.getElementById('invite-overlay');
     if (!overlay) return;

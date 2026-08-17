@@ -31,12 +31,12 @@
 }
 
 .schedule-bg-left {
-    background-image: url('../imgs/pre_wedding_12.jpg');
+    background-image: url('../imgs/schedule/schedule_background_left.jpg');
     background-position: center right;
 }
 
 .schedule-bg-right {
-    background-image: url('../imgs/pre_wedding_117.jpg');
+    background-image: url('../imgs/schedule/schedule_background_right.jpg');
     background-position: center left;
 }
 
@@ -100,7 +100,7 @@
 
 @media (max-width: 768px) {
     .schedule-bg-left {
-        background-image: url('../imgs/pre_wedding_12.jpg');
+        background-image: url('../imgs/schedule/schedule_background_left.jpg');
         background-position: center center;
     }
 
